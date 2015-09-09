@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="OfflineKucharka.Controls.SeznamReceptu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StackPanel>
+        <TextBlock Text="Recepty" Style="{StaticResource Titulek}" />
+        <ItemsControl ItemsSource="{Binding FiltrovaneRecepty}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="3 0 3 5">
+                        <Image Source="{Binding Obrazek}" Tag="{Binding Nazev}" Width="200" MouseDown="Image_MouseDown" Cursor="Hand" ToolTip="Pro otevření detailu klikni" />
+                        <TextBlock Text="{Binding Nazev}" Margin="0 5 0 0" Width="200" TextWrapping="Wrap" FontSize="20" />
+                    </StackPanel>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </StackPanel>
+</UserControl>

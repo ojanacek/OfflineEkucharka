@@ -1,0 +1,12 @@
+﻿<Application x:Class="OfflineKucharka.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:OfflineKucharka"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="Titulek" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="25" />            
+            <Setter Property="Margin" Value="0 0 0 20" />
+        </Style>
+    </Application.Resources>
+</Application>
